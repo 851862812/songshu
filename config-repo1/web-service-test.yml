@@ -1,0 +1,18 @@
+#Oracle JDBC info
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@192.168.81.1:1521:orcl
+    username: HEALTHMAVEN
+    password: HEALTHMAVEN
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+
+## Mybatis 配置（省略JdbcDataSourceConfig文件）
+mybatis:
+  typeAliasesPackage: com.songshu.sls.model
+  mapperLocations: classpath:/mybatis/*.xml
+##加入缓存启用配置
+  configuration:
+    cache-enabled: true
+#服务器配置
+#server.port=8010
